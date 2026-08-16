@@ -30,6 +30,10 @@ jobs:
         working-directory: ./backend
         run: npm run build --if-present
 
+      - name: Restart backend with PM2
+        working-directory: ./backend
+        run: pm2 restart backend
+
       # Frontend
       - name: Install frontend dependencies
         working-directory: ./frontend
